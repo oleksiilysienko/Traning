@@ -1,0 +1,30 @@
+Project Objectives
+Assess how efficiently the body expends energy
+Compare actual calorie expenditure with calorie expenditure calculated using the MET formula
+Analyze seasonality, cyclic patterns, and behavioral trends
+Data Preparation & Segmentation
+I prepared the dataset and performed the segmentation manually without evaluating the elbow method or silhouette score.
+Segmentation included:
+Sedentary users
+Active users
+Athletes
+Interpretation of Regression Results
+When interpreting the contribution of individual factors to calorie expenditure, the features StepTotal, TotalIntensity, and METs showed strong multicollinearity (high correlation with each other).
+The linear regression model demonstrated a solid overall explanatory power (R² ≈ 0.80).
+However, the relative weights of the coefficients indicate the priority order of factors driving calorie burn — not precise numerical magnitudes.
+Energy Efficiency & ROI Analysis
+Analysis of energy efficiency and return on intensity across user clusters revealed:
+More trained users cover longer distances per minute of activity and per calorie burned.
+Their movement is more economical and consistent.
+Time-series models (SARIMA, Prophet) additionally showed:
+Clear cyclic patterns in activity
+Predictable weekly and hourly rhythms
+Forecastable fluctuations in efficiency metrics
+Conclusions
+Training level directly correlates with both the total volume of activity and the efficiency with which it is performed.
+Intensity is the primary driver of calorie expenditure.
+MET-minutes is a reliable and stable metric for estimating real physical load.
+Time-series forecasting confirms that users follow repeatable cycles, which can be predicted.
+⚠️ Important Note
+By removing zero values, I shift the results toward higher activity levels.
+Therefore, the obtained results should be interpreted only as a methodological demonstration, given the limitations of the source data.
